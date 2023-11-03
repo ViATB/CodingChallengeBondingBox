@@ -1,21 +1,17 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(CodingChallenge
-        VERSION 0.0.1
-    )
+project(CodingChallenge)
 
-set(USE_OPENCV ON CACHE BOOL "use opencv")
+IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+	SET(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/../install" CACHE PATH "" FORCE)
+ENDIF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 
-if(${USE_OPENCV})
-    find_package(opencv
-            PATHS "C:/SDK"
-            Components
-                myLib@1.0.0    
-        )
+find_package(OpenCV REQUIRED
+		PATHS "${CMAKE_SOURCE_DIR}/ext/opencv/build"  
+	)
 
-endif(${USE_OPENCV})
 
-find_package(GTest REQUIRED)
+#find_package(GTest REQUIRED)
 
 add_subdirectory(src)
 
