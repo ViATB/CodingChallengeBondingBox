@@ -1,0 +1,6 @@
+[submodule "ext/opencv_contrib"]
+	path = ext/opencv_contrib
+	url = https://github.com/opencv/opencv_contrib
+[submodule "ext/opencv"]
+	path = ext/opencv
+	url = https://github.com/opencv/opencv
