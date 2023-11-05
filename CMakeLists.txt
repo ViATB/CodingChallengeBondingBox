@@ -10,7 +10,7 @@ IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 ENDIF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 
 find_package(OpenCV REQUIRED
-	PATHS "C:/Users/tombo/Dropbox/CodingChallange/build/opencv/x64/vc17"
+	PATHS "C:/Users/tombo/Dropbox/CodingChallange/build/opencv"
 )
 
 

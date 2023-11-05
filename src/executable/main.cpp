@@ -1,8 +1,6 @@
 #include <iostream> // for standard I/O
 #include <string>   // for strings
 #include <opencv2/opencv.hpp>
-//#include <opencv2/core.hpp>     // Basic OpenCV structures (cv::Mat, Scalar)
-//#include <opencv2/videoio.hpp>
 #include <opencv2/highgui.hpp>  // OpenCV window I/O
 #include <opencv2/tracking.hpp>
 
@@ -10,41 +8,37 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
+    cv::VideoCapture captVideo;
     if (argc != 2)
     {
-        std::cout << "Please add a video file path.";
-        return -1;
+        std::cout << "No video file path provided. Using default camera."  << endl;
+        captVideo = cv::VideoCapture(0);
+    } else {
+        // create video capturing object
+        captVideo = cv::VideoCapture(argv[1]);
     }
-
-    const string source = argv[1];
-
-    // create video capturing object
-    //cv::VideoCapture captVideo(source);
-    cv::VideoCapture captVideo(source);
 
     if (! captVideo.isOpened())
     {
-        cout << "Could not open video file: " << source << endl;
+        cout << "Could neither open video file nor default camera." << endl;
         return -1;
     }
 
     // Get video resolution
     int frameWidth = static_cast<int>(captVideo.get(cv::CAP_PROP_FRAME_WIDTH));
     int frameHeigth = static_cast<int>(captVideo.get(cv::CAP_PROP_FRAME_HEIGHT));
+    int framerate = static_cast<int>(captVideo.get(cv::CAP_PROP_FPS));
 
     cv::Size size = cv::Size(frameWidth, frameHeigth);
 
-    cout << "Reference frame resolution: Width=" << size.width << "  Height=" << size.height
-        << " of nr#: " << captVideo.get(cv::CAP_PROP_FRAME_COUNT) << endl;
-
-
     // Create video writer object
-    cv::VideoWriter output("output.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), 30, size);
+    cv::VideoWriter output("output.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), framerate, size);
 
     cv::Mat frame;
-    //cv::Ptr<cv::Tracker> tracker = cv::TrackerNano::create();
-    cv::Ptr<cv::Tracker> tracker = cv::TrackerKCF::create();
+    captVideo.read(frame);
     cv::Rect trackingBox = cv::selectROI(frame, false);
+    
+    cv::Ptr<cv::Tracker> tracker = cv::TrackerKCF::create();
     tracker->init(frame, trackingBox);
 
     while (captVideo.read(frame))
@@ -61,7 +55,10 @@ int main(int argc, char* argv[])
         output.write(frame);
 
         // For breaking the loop
-        if (cv::waitKey(25) >= 0) break;
+        if (cv::waitKey(25) >= 0)
+        {
+            break;
+        }
     }
         
     // Release video capture and writer
@@ -74,14 +71,3 @@ int main(int argc, char* argv[])
     return 0;
 }
 
-
-
-
-/*
-
-1. Read Video Stream
-2. Object Erkennung
-3. Bounding Box hinzufügen
-4. Video in Datei schreiben
-
-*/
