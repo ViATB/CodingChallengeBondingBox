@@ -2,57 +2,32 @@
 #include <string>   // for strings
 #include <opencv2/opencv.hpp>
 #include <opencv2/highgui.hpp>  // OpenCV window I/O
-#include <opencv2/tracking.hpp>
+#include <BoundingBoxHelper.h>
+#include <SegmentationHelper.h>
+#include <VideoHelper.h>
 
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-    cv::VideoCapture captVideo;
-    if (argc != 2)
-    {
-        std::cout << "No video file path provided. Using default camera."  << endl;
-        captVideo = cv::VideoCapture(0);
-    } else {
-        // create video capturing object
-        captVideo = cv::VideoCapture(argv[1]);
-    }
+    SegmentationHelper oSegmentationHelper = SegmentationHelper();
 
-    if (! captVideo.isOpened())
-    {
-        cout << "Could neither open video file nor default camera." << endl;
-        return -1;
-    }
-
-    // Get video resolution
-    int frameWidth = static_cast<int>(captVideo.get(cv::CAP_PROP_FRAME_WIDTH));
-    int frameHeigth = static_cast<int>(captVideo.get(cv::CAP_PROP_FRAME_HEIGHT));
-    int framerate = static_cast<int>(captVideo.get(cv::CAP_PROP_FPS));
-
-    cv::Size size = cv::Size(frameWidth, frameHeigth);
-
-    // Create video writer object
-    cv::VideoWriter output("output.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), framerate, size);
+    VideoHelper oVideoHelper = (argc == 2) ? VideoHelper(argv[1]) : VideoHelper();
 
     cv::Mat frame;
-    captVideo.read(frame);
-    cv::Rect trackingBox = cv::selectROI(frame, false);
-    
-    cv::Ptr<cv::Tracker> tracker = cv::TrackerKCF::create();
-    tracker->init(frame, trackingBox);
+    oVideoHelper.read(frame);
+    BoundingBoxHelper oBoundingBoxHelper(frame);
 
-    while (captVideo.read(frame))
+    while (oVideoHelper.read(frame))
     {
-        if (tracker->update(frame, trackingBox))
-        {
-            cv::rectangle(frame, trackingBox, cv::Scalar(255, 0, 0), 2, 8);
-        }
+        oBoundingBoxHelper.update(frame);
+
+        oSegmentationHelper.doSegementation(frame);
 
         // Display the frame
         cv::imshow("Video feed", frame);
 
-        // Write video frame to output
-        output.write(frame);
+        oVideoHelper.write(frame);
 
         // For breaking the loop
         if (cv::waitKey(25) >= 0)
@@ -60,10 +35,6 @@ int main(int argc, char* argv[])
             break;
         }
     }
-        
-    // Release video capture and writer
-    output.release();
-    captVideo.release();
 
     // Destroy all windows
     cv::destroyAllWindows();

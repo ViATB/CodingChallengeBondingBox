@@ -5,7 +5,11 @@ add_executable(${PROJECT_NAME}
     )
 
 target_link_libraries(${PROJECT_NAME}
-    ${OpenCV_LIBS}
+	PUBLIC
+    		${OpenCV_LIBS}
+		BoundingBoxHelper
+    		SegmentationHelper
+		VideoHelper
 )
 
 install(
