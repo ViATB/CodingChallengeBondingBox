@@ -8,5 +8,9 @@ class SegmentationHelper
 	public:
 		SegmentationHelper();	
 		
-		void doSegementation(cv::Mat frame);
+		void doWatershedAlgo(cv::Mat& frame);
+		void doGrabCut(cv::Mat& frame, const cv::Rect& trackingBox);
+
+	private:
+		cv::Rect* m_oRect = nullptr;
 };

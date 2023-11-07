@@ -6,8 +6,9 @@
 class BoundingBoxHelper
 {
 	public:
-		BoundingBoxHelper(cv::Mat frame);
-		void update(cv::Mat frame);
+		BoundingBoxHelper(cv::Mat& frame);
+		void update(cv::Mat& frame);
+		const cv::Rect getBox();
 
 	private:
 		cv::Rect m_oTrackingBox;

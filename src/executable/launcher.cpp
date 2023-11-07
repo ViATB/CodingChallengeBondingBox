@@ -11,25 +11,24 @@ using namespace std;
 int main(int argc, char* argv[])
 {
     SegmentationHelper oSegmentationHelper = SegmentationHelper();
-
     VideoHelper oVideoHelper = (argc == 2) ? VideoHelper(argv[1]) : VideoHelper();
 
     cv::Mat frame;
     oVideoHelper.read(frame);
+
     BoundingBoxHelper oBoundingBoxHelper(frame);
 
     while (oVideoHelper.read(frame))
     {
         oBoundingBoxHelper.update(frame);
 
-        oSegmentationHelper.doSegementation(frame);
+        oSegmentationHelper.doGrabCut(frame, oBoundingBoxHelper.getBox());
+        oSegmentationHelper.doWatershedAlgo(frame);
 
-        // Display the frame
         cv::imshow("Video feed", frame);
 
         oVideoHelper.write(frame);
 
-        // For breaking the loop
         if (cv::waitKey(25) >= 0)
         {
             break;

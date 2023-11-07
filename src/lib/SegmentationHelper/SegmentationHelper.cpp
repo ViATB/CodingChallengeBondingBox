@@ -5,9 +5,40 @@ using namespace cv;
 
 SegmentationHelper::SegmentationHelper()
 {
+
 }
 
-void SegmentationHelper::doSegementation(cv::Mat frame) {
+
+void SegmentationHelper::doGrabCut(cv::Mat& frame, const cv::Rect& trackingBox) {
+
+    cv::Mat mask, bg, fg;
+
+    cv::grabCut(frame, mask, trackingBox, bg, fg, 2, cv::GC_INIT_WITH_RECT);
+    //cv::Mat result = frame.clone();
+    for (int i = 0; i < frame.cols; i++)
+    {
+        for (int j = 0; j < frame.rows; j++) {
+            if ((int)mask.at<uchar>(cv::Point(i, j)) == 0) {
+                frame.at<cv::Vec3b>(cv::Point(i, j))[0] = 255;
+                frame.at<cv::Vec3b>(cv::Point(i, j))[1] = 255;
+                frame.at<cv::Vec3b>(cv::Point(i, j))[2] = 255;
+            }
+            else if ((int)mask.at<uchar>(cv::Point(i, j)) == 1) {
+                frame.at<cv::Vec3b>(cv::Point(i, j))[0] = 255;
+                frame.at<cv::Vec3b>(cv::Point(i, j))[1] = 0;
+                frame.at<cv::Vec3b>(cv::Point(i, j))[2] = 0;
+
+            }
+            else if ((int)mask.at<uchar>(cv::Point(i, j)) == 2) {
+                frame.at<cv::Vec3b>(cv::Point(i, j))[0] = 0;
+                frame.at<cv::Vec3b>(cv::Point(i, j))[1] = 0;
+                frame.at<cv::Vec3b>(cv::Point(i, j))[2] = 255;
+            }
+        }
+    }
+}
+// marker-based image segmentation
+void SegmentationHelper::doWatershedAlgo(cv::Mat& frame) {
 
     // Show the source image
     imshow("Source Image", frame);
@@ -17,14 +48,15 @@ void SegmentationHelper::doSegementation(cv::Mat frame) {
     Mat mask;
     inRange(frame, Scalar(100, 100, 100), Scalar(155, 155, 155), mask);
     frame.setTo(Scalar(0, 0, 0), mask);
-    // Show output image
+
     imshow("Black Background Image", frame);
 
     // Create a kernel that we will use to sharpen our image
     Mat kernel = (Mat_<float>(3, 3) <<
         1, 1, 1,
         1, -8, 1,
-        1, 1, 1); // an approximation of second derivative, a quite strong kernel
+        1, 1, 1);
+    // an approximation of second derivative, a quite strong kernel
     // do the laplacian filtering as it is
     // well, we need to convert everything in something more deeper then CV_8U
     // because the kernel has some negative values,
@@ -50,6 +82,8 @@ void SegmentationHelper::doSegementation(cv::Mat frame) {
     cvtColor(imgResult, bw, COLOR_BGR2GRAY);
     threshold(bw, bw, 40, 255, THRESH_BINARY | THRESH_OTSU);
     imshow("Binary Image", bw);
+    
+    /*
     // Perform the distance transform algorithm
     Mat dist;
     distanceTransform(bw, dist, DIST_L2, 3);
@@ -118,7 +152,6 @@ void SegmentationHelper::doSegementation(cv::Mat frame) {
     }
     // Visualize the final image
     imshow("Final Result", dst);
-    //waitKey();
-
+    */
     return;
 }
