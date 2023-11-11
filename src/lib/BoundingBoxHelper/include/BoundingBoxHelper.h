@@ -7,7 +7,7 @@ class BoundingBoxHelper
 {
 	public:
 		BoundingBoxHelper(cv::Mat& frame);
-		void update(cv::Mat& frame);
+		cv::Mat update(const cv::Mat& frame);
 		const cv::Rect getBox();
 
 	private:

@@ -9,14 +9,17 @@ BoundingBoxHelper::BoundingBoxHelper(cv::Mat& frame)
     m_oTracker->init(frame, m_oTrackingBox);
 }
 
-void BoundingBoxHelper::update(cv::Mat& frame)
+cv::Mat BoundingBoxHelper::update(const cv::Mat& frame)
 {
-    if (! m_oTracker->update(frame, m_oTrackingBox))
+    cv::Mat result = frame.clone();
+    if (! m_oTracker->update(result, m_oTrackingBox))
     {
-        return;
+        return result;
     }
     
-    cv::rectangle(frame, m_oTrackingBox, cv::Scalar(255, 0, 0), 2, 8, 1);
+    cv::rectangle(result, m_oTrackingBox, cv::Scalar(255, 0, 0), 2, 8, 0);
+
+    return result;
 }
 
 const cv::Rect BoundingBoxHelper::getBox() {

@@ -5,51 +5,53 @@ using namespace cv;
 
 SegmentationHelper::SegmentationHelper()
 {
-
 }
 
+Mat SegmentationHelper::doGrabCut(const Mat& frame, const Rect& trackingBox) {
 
-void SegmentationHelper::doGrabCut(cv::Mat& frame, const cv::Rect& trackingBox) {
+    Mat result = frame.clone();
 
-    cv::Mat mask, bg, fg;
+    Mat mask, bg, fg;
+    grabCut(result, mask, trackingBox, bg, fg, 2, GC_INIT_WITH_RECT);
 
-    cv::grabCut(frame, mask, trackingBox, bg, fg, 2, cv::GC_INIT_WITH_RECT);
-    //cv::Mat result = frame.clone();
-    for (int i = 0; i < frame.cols; i++)
+    for (int i = 0; i < result.cols; i++)
     {
-        for (int j = 0; j < frame.rows; j++) {
-            if ((int)mask.at<uchar>(cv::Point(i, j)) == 0) {
-                frame.at<cv::Vec3b>(cv::Point(i, j))[0] = 255;
-                frame.at<cv::Vec3b>(cv::Point(i, j))[1] = 255;
-                frame.at<cv::Vec3b>(cv::Point(i, j))[2] = 255;
+        for (int j = 0; j < result.rows; j++) {
+            if ((int)mask.at<uchar>(Point(i, j)) == 0) {
+                result.at<Vec3b>(Point(i, j))[0] = 255;
+                result.at<Vec3b>(Point(i, j))[1] = 255;
+                result.at<Vec3b>(Point(i, j))[2] = 255;
             }
-            else if ((int)mask.at<uchar>(cv::Point(i, j)) == 1) {
-                frame.at<cv::Vec3b>(cv::Point(i, j))[0] = 255;
-                frame.at<cv::Vec3b>(cv::Point(i, j))[1] = 0;
-                frame.at<cv::Vec3b>(cv::Point(i, j))[2] = 0;
+            else if ((int)mask.at<uchar>(Point(i, j)) == 1) {
+                result.at<Vec3b>(Point(i, j))[0] = 255;
+                result.at<Vec3b>(Point(i, j))[1] = 0;
+                result.at<Vec3b>(Point(i, j))[2] = 0;
 
             }
-            else if ((int)mask.at<uchar>(cv::Point(i, j)) == 2) {
-                frame.at<cv::Vec3b>(cv::Point(i, j))[0] = 0;
-                frame.at<cv::Vec3b>(cv::Point(i, j))[1] = 0;
-                frame.at<cv::Vec3b>(cv::Point(i, j))[2] = 255;
+            else if ((int)mask.at<uchar>(Point(i, j)) == 2) {
+                result.at<Vec3b>(Point(i, j))[0] = 0;
+                result.at<Vec3b>(Point(i, j))[1] = 0;
+                result.at<Vec3b>(Point(i, j))[2] = 255;
             }
         }
     }
-}
-// marker-based image segmentation
-void SegmentationHelper::doWatershedAlgo(cv::Mat& frame) {
 
-    // Show the source image
-    imshow("Source Image", frame);
+    return result;
+}
+
+// marker-based image segmentation
+Mat SegmentationHelper::doWatershedAlgo(const Mat& frame) {
+
+    Mat result = frame.clone();
+
     // Change the background from white to black, since that will help later to extract
     // better results during the use of Distance Transform
     
     Mat mask;
-    inRange(frame, Scalar(100, 100, 100), Scalar(155, 155, 155), mask);
-    frame.setTo(Scalar(0, 0, 0), mask);
+    inRange(result, Scalar(100, 100, 100), Scalar(155, 155, 155), mask);
+    result.setTo(Scalar(0, 0, 0), mask);
 
-    imshow("Black Background Image", frame);
+    imshow("Black Background Image", result);
 
     // Create a kernel that we will use to sharpen our image
     Mat kernel = (Mat_<float>(3, 3) <<
@@ -65,10 +67,10 @@ void SegmentationHelper::doWatershedAlgo(cv::Mat& frame) {
     // so the possible negative number will be truncated
 
     Mat imgLaplacian;
-    filter2D(frame, imgLaplacian, CV_32F, kernel);
+    filter2D(result, imgLaplacian, CV_32F, kernel);
 
     Mat sharp;
-    frame.convertTo(sharp, CV_32F);
+    result.convertTo(sharp, CV_32F);
 
     Mat imgResult = sharp - imgLaplacian;
     // convert back to 8bits gray scale
@@ -83,7 +85,6 @@ void SegmentationHelper::doWatershedAlgo(cv::Mat& frame) {
     threshold(bw, bw, 40, 255, THRESH_BINARY | THRESH_OTSU);
     imshow("Binary Image", bw);
     
-    /*
     // Perform the distance transform algorithm
     Mat dist;
     distanceTransform(bw, dist, DIST_L2, 3);
@@ -150,8 +151,6 @@ void SegmentationHelper::doWatershedAlgo(cv::Mat& frame) {
             }
         }
     }
-    // Visualize the final image
-    imshow("Final Result", dst);
-    */
-    return;
+
+    return result;
 }

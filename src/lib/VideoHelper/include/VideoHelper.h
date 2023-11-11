@@ -11,11 +11,10 @@ class VideoHelper
 		~VideoHelper();
 
 		bool read(cv::Mat& frame);
-		void write(cv::Mat& frame);
+		void write(const cv::Mat& frame, const std::string& keyWriter);
 
 	private:
 		cv::VideoCapture m_oCaptVideo;
-		cv::VideoWriter m_oWriterVideo;
-		void setup();
+		std::map<std::string, cv::VideoWriter> m_mapWriter;
 };
 
