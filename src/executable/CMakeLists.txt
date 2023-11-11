@@ -10,7 +10,7 @@ target_link_libraries(${PROJECT_NAME}
             BoundingBoxHelper
             SegmentationHelper
             VideoHelper
-	)
+    )
 
 install(
         TARGETS

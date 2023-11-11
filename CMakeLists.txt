@@ -7,7 +7,7 @@ IF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 ENDIF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 
 find_package(OpenCV REQUIRED
-	PATHS "C:/Users/tombo/Dropbox/CodingChallange/build/opencv"
+	PATHS "${CMAKE_SOURCE_DIR}/../build/opencv"
 )
 
 add_subdirectory(src)

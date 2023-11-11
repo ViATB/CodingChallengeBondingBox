@@ -7,17 +7,17 @@ add_library(${PROJECT_NAME}
 
 target_include_directories(${PROJECT_NAME}
 	PUBLIC
-		${CMAKE_CURRENT_SOURCE_DIR}/include
+            ${CMAKE_CURRENT_SOURCE_DIR}/include
     )
 
 target_link_libraries(${PROJECT_NAME}
 	PUBLIC
-        	${OpenCV_LIBS}	
+            ${OpenCV_LIBS}	
     )
 
 install(
 	TARGETS
-		${PROJECT_NAME}
+	    ${PROJECT_NAME}
         LIBRARY DESTINATION
             lib
         RUNTIME DESTINATION

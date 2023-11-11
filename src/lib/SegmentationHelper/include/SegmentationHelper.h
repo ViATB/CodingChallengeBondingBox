@@ -7,7 +7,9 @@ class SegmentationHelper
 {
 	public:
 		SegmentationHelper();	
-		
 		cv::Mat doGrabCut(const cv::Mat& frame, const cv::Rect& trackingBox);
-		cv::Mat doWatershedAlgo(const cv::Mat& frame);
+
+	private:
+		void getBinMask(const cv::Mat& comMask, cv::Mat& binMask);
 };
+
