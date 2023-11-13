@@ -14,14 +14,3 @@ target_link_libraries(${PROJECT_NAME}
 	PUBLIC
             ${OpenCV_LIBS}	
     )
-
-#install(
-#	TARGETS
-#	    ${PROJECT_NAME}
-#        LIBRARY DESTINATION
-#            lib
-#        RUNTIME DESTINATION
-#            bin
-#        INCLUDES DESTINATION
-#            include
-#    )

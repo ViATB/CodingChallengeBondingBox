@@ -20,10 +20,3 @@ install(
         DESTINATION
             bin
     )
-
-install(
-        FILES
-            ${CMAKE_SOURCE_DIR}/doc/data/video.avi
-        DESTINATION
-            bin
-    )
