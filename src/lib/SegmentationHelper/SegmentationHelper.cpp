@@ -15,7 +15,7 @@ SegmentationHelper::SegmentationHelper() {
 void SegmentationHelper::getBinMask(const Mat& comMask, Mat& binMask) {
 
     if (comMask.empty() || comMask.type() != CV_8UC1) {
-        CV_Error(Error::StsBadArg, "comMask is empty or has incorrect type (not CV_8UC1)");
+        CV_Error(Error::StsBadArg, "comMask is empty or has incorrect type.");
     }
 
     if ((binMask.empty() || binMask.rows != comMask.rows)

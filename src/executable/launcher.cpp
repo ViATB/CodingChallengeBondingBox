@@ -23,13 +23,14 @@ int main(int argc, char* argv[]) {
     while (oVideoHelper.read(frame)) {
 
         frameOut = oBoundingBoxHelper.update(frame);
-        cv::imshow("Bounding Box Video Feed", frameOut);
-        oVideoHelper.write(frameOut, "output");
+        cv::imshow("Bounding Box Video Output", frameOut);
+        oVideoHelper.write(frameOut, "output_bounding_box");
 
         frameOut = oSegmentationHelper.doGrabCut(frame, oBoundingBoxHelper.getBox());
-        cv::imshow("Grap Cut Video Feed", frameOut);
-        oVideoHelper.write(frameOut, "output_doGrapCut");
+        cv::imshow("Grap Cut Video Output", frameOut);
+        oVideoHelper.write(frameOut, "output_grap_cut");
 
+        // break the loop
         if (cv::waitKey(25) >= 0) {
             break;
         }

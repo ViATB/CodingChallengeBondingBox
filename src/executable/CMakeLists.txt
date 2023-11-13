@@ -5,7 +5,7 @@ add_executable(${PROJECT_NAME}
     )
 
 target_link_libraries(${PROJECT_NAME}
-	PUBLIC
+	   PUBLIC
             ${OpenCV_LIBS}
             BoundingBoxHelper
             SegmentationHelper
@@ -23,7 +23,7 @@ install(
 
 install(
         FILES
-            ${CMAKE_SOURCE_DIR}/data/video.avi
+            ${CMAKE_SOURCE_DIR}/doc/data/video.avi
         DESTINATION
             bin
     )

@@ -12,10 +12,10 @@ VideoHelper::VideoHelper(const std::string& filename)
     : m_oCaptVideo(filename)
 {
 }
-// Release video capture and writers
+
 VideoHelper::~VideoHelper()
 {
-
+    // Release video capture and writers
     m_oCaptVideo.release();
 
     for (auto& writer : m_mapWriter)
@@ -60,4 +60,3 @@ void VideoHelper::write(const cv::Mat& frame, const std::string& keyWriter)
     m_mapWriter[keyWriter].write(frame);
 }
 
-//void VideoHelper::write(const cv::Mat& frame, const std::string& keyWriter)
