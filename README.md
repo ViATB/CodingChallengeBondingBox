@@ -9,8 +9,19 @@ The following functions are implemented:
 4. a video output for each sub-step
 5. text output of the last frame in yaml format
 
-# How to build
+## How to build
 
-* Please check out the Git submodules located in the "ext" directory and build them with the customised CMakelists.txt in this directory.
-* install it
-* this install folder needs to be set as OpenCV_DIR for this project
+* please check out the Git submodules located in the "ext" directory
+* build the external libraries using the customised CMakelists.txt and install it
+* set the opencv install folder as OpenCV_DIR cmake argument for this project
+* add opencv to the system path
+* build and install the project
+
+## How to run
+
+* the launcher.exe can be startet via terminal (e.g. mingw64) like:
+```
+./launcher.exe <path/to/video.avi>
+```
+
+* if no file path is specified, the default camera is used

@@ -1,0 +1,581 @@
+%YAML:1.0
+---
+bounding_box:
+   top-left-corner: [ 970, 323 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 971, 324 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 966, 325 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 961, 320 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 956, 315 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 951, 310 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 950, 311 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 943, 310 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 938, 315 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 931, 320 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 922, 323 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 921, 322 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 914, 325 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 911, 320 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 906, 319 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 899, 316 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 900, 317 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 891, 316 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 882, 321 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 871, 324 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 860, 327 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 859, 326 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 852, 323 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 843, 316 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 836, 313 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 825, 312 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 824, 313 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 815, 316 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 808, 321 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 795, 324 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 784, 327 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 781, 326 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 774, 325 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 765, 320 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 758, 321 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 745, 322 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 744, 323 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 731, 328 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 720, 337 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 705, 342 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 694, 345 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 691, 344 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 682, 343 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 669, 340 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 656, 345 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 643, 348 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 642, 349 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 631, 354 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 620, 361 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 607, 364 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 594, 363 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 591, 362 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 582, 359 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 569, 356 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 556, 359 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 541, 360 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 540, 361 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 527, 366 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 514, 369 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 497, 370 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 480, 367 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 479, 366 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 466, 361 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 451, 358 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 436, 361 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 421, 362 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 420, 363 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 405, 366 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 390, 371 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 375, 374 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 362, 373 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 359, 372 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 346, 369 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 329, 364 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 312, 365 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 295, 368 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 294, 369 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 277, 374 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 258, 377 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 237, 378 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 236, 379 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 219, 374 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 204, 371 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 187, 368 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 172, 369 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 169, 368 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 156, 371 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 141, 374 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 124, 379 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 109, 382 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 108, 383 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 97, 380 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 84, 377 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 71, 374 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 58, 373 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 57, 372 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 46, 375 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 33, 380 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 22, 385 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 9, 384 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 8, 385 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 382 ]
+   size: [ 162, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 379 ]
+   size: [ 153, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 374 ]
+   size: [ 144, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 375 ]
+   size: [ 137, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 374 ]
+   size: [ 136, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 375 ]
+   size: [ 131, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 378 ]
+   size: [ 126, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 381 ]
+   size: [ 119, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 386 ]
+   size: [ 112, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 387 ]
+   size: [ 111, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 388 ]
+   size: [ 104, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 385 ]
+   size: [ 101, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 380 ]
+   size: [ 94, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 379 ]
+   size: [ 91, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 378 ]
+   size: [ 90, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 377 ]
+   size: [ 89, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 380 ]
+   size: [ 88, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 385 ]
+   size: [ 89, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 390 ]
+   size: [ 90, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 391 ]
+   size: [ 91, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 394 ]
+   size: [ 94, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 391 ]
+   size: [ 95, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 386 ]
+   size: [ 96, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 383 ]
+   size: [ 99, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 382 ]
+   size: [ 98, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 383 ]
+   size: [ 101, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 382 ]
+   size: [ 104, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 385 ]
+   size: [ 113, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 390 ]
+   size: [ 116, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 393 ]
+   size: [ 117, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 398 ]
+   size: [ 118, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 403 ]
+   size: [ 123, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 400 ]
+   size: [ 130, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 397 ]
+   size: [ 139, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 396 ]
+   size: [ 138, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 393 ]
+   size: [ 147, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 392 ]
+   size: [ 154, 223 ]
+bounding_box:
+   top-left-corner: [ 0, 393 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 9, 396 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 10, 397 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 19, 402 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 32, 409 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 41, 408 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 52, 405 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 53, 404 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 64, 401 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 77, 396 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 92, 397 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 107, 398 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 110, 399 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 125, 402 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 142, 409 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 159, 414 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 178, 417 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 179, 416 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 198, 415 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 217, 410 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 236, 409 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 257, 406 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 260, 407 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 279, 410 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 304, 415 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 327, 422 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 352, 429 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 353, 428 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 376, 429 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 399, 426 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 424, 423 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 449, 420 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 456, 419 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 481, 420 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 512, 423 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 543, 428 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 580, 435 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 583, 434 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 616, 441 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 647, 442 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 680, 441 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 715, 438 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 720, 437 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 753, 434 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 790, 435 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 829, 436 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 868, 441 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 873, 442 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 910, 449 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 951, 454 ]
+   size: [ 165, 222 ]
+bounding_box:
+   top-left-corner: [ 992, 457 ]
+   size: [ 165, 219 ]
+bounding_box:
+   top-left-corner: [ 1033, 456 ]
+   size: [ 165, 220 ]
+bounding_box:
+   top-left-corner: [ 1038, 457 ]
+   size: [ 165, 219 ]
+bounding_box:
+   top-left-corner: [ 1079, 452 ]
+   size: [ 165, 223 ]
+bounding_box:
+   top-left-corner: [ 1124, 451 ]
+   size: [ 156, 223 ]

@@ -18,11 +18,7 @@ void SegmentationHelper::getBinMask(const Mat& comMask, Mat& binMask) {
         CV_Error(Error::StsBadArg, "comMask is empty or has incorrect type.");
     }
 
-    if ((binMask.empty() || binMask.rows != comMask.rows)
-     || (binMask.cols != comMask.cols)) {
-        binMask.create(comMask.size(), CV_8UC1);
-    }
-
+    binMask.create(comMask.size(), CV_8UC1);
     binMask = comMask & 1;
 }
 

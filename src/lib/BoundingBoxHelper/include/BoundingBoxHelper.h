@@ -7,10 +7,13 @@ class BoundingBoxHelper
 {
 	public:
 		BoundingBoxHelper(const cv::Mat& frame);
+		~BoundingBoxHelper();
 		cv::Mat update(const cv::Mat& frame);
-		const cv::Rect getBox();
+		cv::Rect getBox();
 
 	private:
 		cv::Rect m_oTrackingBox;
 		cv::Ptr<cv::Tracker> m_oTracker;
+		cv::FileStorage m_fileWriter;
+		void writeBoxToTextfile();
 };

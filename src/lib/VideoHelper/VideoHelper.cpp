@@ -11,6 +11,7 @@ VideoHelper::VideoHelper()
 VideoHelper::VideoHelper(const std::string& filename)
     : m_oCaptVideo(filename)
 {
+    std::cout << "Loading file '" << filename << "'." << endl;
 }
 
 VideoHelper::~VideoHelper()
