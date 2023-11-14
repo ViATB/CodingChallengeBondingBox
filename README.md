@@ -28,5 +28,11 @@ The following functions are implemented:
 
 ## Example Data
 
-* an example video file can be found here: `./data/example/video.avi`
-* some example outputs can be found here: `./data/output/`
+* an example video file can be found here:
+```
+./data/example/video.avi`
+```
+* some example outputs can be found here: 
+```
+./data/output/
+```
