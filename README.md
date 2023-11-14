@@ -30,7 +30,7 @@ The following functions are implemented:
 
 * an example video file can be found here:
 ```
-./data/example/video.avi`
+./data/example/video.avi
 ```
 * some example outputs can be found here: 
 ```
