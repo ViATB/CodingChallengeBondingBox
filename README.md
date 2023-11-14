@@ -7,7 +7,7 @@ The following functions are implemented:
 2. possibility to create a bounding box which follows the target
 3. segmentation to stand out from the background
 4. a video output for each sub-step
-5. text output of the last frame in yaml format
+5. size and corner coordinates of the tracking box in yaml text format
 
 ## How to build
 
