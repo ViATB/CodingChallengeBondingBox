@@ -25,3 +25,8 @@ The following functions are implemented:
 ```
 
 * if no file path is specified, the default camera is used
+
+## Example Data
+
+* an example video file can be found here: `./data/example/video.avi`
+* some example outputs can be found here: `./data/output/`
